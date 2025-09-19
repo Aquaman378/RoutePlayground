@@ -7,10 +7,13 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "scheme": "your-app-scheme"
+
     },
     "ios": {
       "supportsTablet": true
@@ -22,9 +25,9 @@
       },
       "edgeToEdgeEnabled": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+  "web": {
+    "bundler": "metro"
+  },
     "plugins": [
       "expo-router"
     ]
