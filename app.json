@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "RoutePlayground",
+    "scheme": "your-app-scheme",
     "slug": "RoutePlayground",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -11,9 +12,7 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff",
-      "scheme": "your-app-scheme"
-
+      "backgroundColor": "#ffffff"
     },
     "ios": {
       "supportsTablet": true
