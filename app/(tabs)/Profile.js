@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, } from 'react-native';
-import LinkButton from '../components/LinkButton';
+import LinkButton from '../../components/LinkButton';
 
-export default function MainPage() {
+export default function Profile() {
   return (
     <View style={styles.container}>
-      <Text>Main Page</Text>
+      <Text>Profile Page </Text>
       <StatusBar style="auto" />
-      <LinkButton page = "About" title="Name"/>
-      <LinkButton page = "Tab_1" title = "Test 1"/> 
+
+      <LinkButton page = "Tab_1" title = "Test 1"/>
     </View>
   );
 }
@@ -16,7 +16,7 @@ export default function MainPage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    backgroundColor: 'Red',
     alignItems: 'center',
     justifyContent: 'center',
   },
