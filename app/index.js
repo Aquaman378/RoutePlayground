@@ -4,30 +4,28 @@ import { LinearGradient } from 'expo-linear-gradient';
 import LinkButton from '../components/LinkButton';
 
 export default function MainPage() {
-  
   const colorScheme = useColorScheme();
-  const themeTextStyle = colorScheme === 'light' ? styles.lightThemeText : styles.darkThemeText;
+  const themeTextStyle =
+    colorScheme === 'dark' ? styles.lightThemeText : styles.darkThemeText;
   const themeContainerStyle =
-    colorScheme === 'light' ? styles.lightContainer : styles.darkContainer; //condition ? expressionIfTrue : expressionIfFalse;
-  
-  return (
-    <View style={styles.container}>
+    colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
 
-      <Text style={[styles.text, themeTextStyle]}>Main Page</Text>
+  return (
+    <View style={[styles.container, themeContainerStyle]}>
       <StatusBar style="auto" />
-      <View style={styles.button}>
-        <LinkButton page="About" title="Name" />
-        <LinkButton page="Tab_1" title="Test 1" />
-        <Text style={styles.text}>Sign in with Facebook</Text>
-      </View>
-      
+
       <LinearGradient
-        // Background Linear Gradient
         colors={['rgba(0,0,0,0.8)', 'transparent']}
         style={styles.background}
       />
-      <View>
-        
+
+      <View style={styles.content}>
+        <Text style={[styles.text, themeTextStyle]}>Main Page</Text>
+        <LinkButton style={[styles.button, styles.text]} page="Tab_1" title="Tabs Page" />
+        <Text style={[styles.text, themeTextStyle]}>Next page</Text>
+      </View>
+      <View style={[styles.content]}>
+      <LinkButton style={styles.button} page="About" title="Name" />
       </View>
     </View>
   );
@@ -36,25 +34,38 @@ export default function MainPage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  lightContainer: {
     backgroundColor: 'orange',
   },
+  darkContainer: {
+    backgroundColor: '#121212',
+  },
   background: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    height: 300,
+    ...StyleSheet.absoluteFillObject, // full screen gradient
+  },
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   button: {
-    padding: 10,
-    borderRadius: 50,
-    backgroundColor: "white"
+    marginVertical: 10,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    backgroundColor: 'blue',
+    borderColor: "blue",
   },
   text: {
-    backgroundColor: 'transparent',
-    fontSize: 15,
+    fontSize: 16,
+    color:'white',
+    marginVertical: 8,
+  },
+  lightThemeText: {
+    color: '#000',
+  },
+  darkThemeText: {
     color: '#fff',
   },
 });

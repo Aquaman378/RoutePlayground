@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import LinkButton from '../components/LinkButton';
 
 export default function About() {
@@ -10,7 +11,7 @@ export default function About() {
       <Text>About Page </Text>
       <StatusBar style="auto" />
 
-      <LinkButton page="Contact" title="HHH" />
+      <LinkButton page="Contact" title="HHH"  backgroundColor="blue"/>
 
       <LinearGradient
         // Background Linear Gradient

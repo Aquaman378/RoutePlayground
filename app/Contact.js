@@ -16,8 +16,8 @@ export default function Contact() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'light blue',
+    flex: 0.5,
+    backgroundColor: 'blue',
     alignItems: 'center',
     justifyContent: 'center',
   },
