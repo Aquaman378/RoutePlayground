@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import LinkButton from '../../components/LinkButton';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import myColors from '../../constants/colorSheet';
 
 import { Linking } from 'react-native';
 

@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, SafeAreaView, Image, Button, Alert } from 'reac
 import Checkbox from 'expo-checkbox';
 import { LinearGradient } from 'expo-linear-gradient';
 import LinkButton from '../../components/LinkButton';
+import myColors from '../../constants/colorSheet';
+
 
 export default function Tab_1() {
   const [isChecked, setChecked] = useState(false);

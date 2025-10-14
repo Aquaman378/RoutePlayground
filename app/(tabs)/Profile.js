@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, } from 'react-native';
 import LinkButton from '../../components/LinkButton';
+import myColors from '../../constants/colorSheet';
 
 export default function Profile() {
   return (
@@ -16,7 +17,7 @@ export default function Profile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'Red',
+    backgroundColor: myColors.primary,
     alignItems: 'center',
     justifyContent: 'center',
   },
